@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>~ Benedict Name Garden ~</title>
+    <link rel="stylesheet" type="text/css" href="BCstyl.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1>Benedict <span> Cumberbatch </span></h1>
+            <p class="subtitle">✧ randomise his name ✧</p>
+        </header>
+        
+        <div class="box">
+            <div class="item photo">
+                <img src="https://i.pinimg.com/1200x/df/33/74/df3374a1bf7827d015ab70fb322dba26.jpg" alt="Babygirl Cutiepie" class="img">
+            </div>
+
+            <div class="item generator">
+                <p class="label">Current Name:</p>
+                <div id="name" class="los">Click to Choose</div>
+                <button type="button" onclick="los()" class="button">Click ✨</button>
+            </div>
+
+            <div class="item photo">
+                <img src="https://i.pinimg.com/1200x/f9/5f/91/f95f914873626c5c39e5ead7f6447def.jpg" alt="Benedict Cucumber" class="img">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function los() {
+            const first = [
+                "Benedict", "Babygirl", "Biscuit", "Briecheese", "Buttercup", 
+                "Blueberry", "Bibledude", "Benefit", "Benadryl", "Bunnyrabbit", 
+                "Bodysnatch", "Buffalo", "Buckingham", "Butterfree", "Bedazzled"
+            ];
+            const last = [
+                "Cumberbatch", "Cutiepie", "Cucumber", "Camembert", "Cloverfield", 
+                "Cottagecore", "Comingback", "Cosmetics", "Curlingstone", "Crumpet", 
+                "Candycrush", "Crumplezone", "Cherryblossom"
+            ];
+            
+            const randomFirst = first[Math.floor(Math.random() * first.length)];
+            const randomLast = last[Math.floor(Math.random() * last.length)];
+            
+            document.getElementById('name').innerHTML = randomFirst + " " + randomLast;
+        }
+    </script>
+</body>
+</html>
